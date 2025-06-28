@@ -15,7 +15,8 @@ pc = Pinecone(api_key=PINECONE_API_KEY)
 index = pc.Index("edututor-index")
 
 # --- Load Sentence Transformer Model ---
-model = SentenceTransformer("all-MiniLM-L6-v2")
+model = SentenceTransformer("all-MiniLM-L6-v2", device="cpu")
+
 
 # --- Streamlit App UI ---
 st.set_page_config(page_title="EduTutor AI", page_icon="🎓", layout="wide")
